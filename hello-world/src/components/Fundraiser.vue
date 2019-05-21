@@ -2,7 +2,8 @@
   <div class="fund">
     <h2>Fundraiser Name</h2>
     <h3>Organization Name</h3>
-    <h3>Location; Time</h3>
+    <h3>Time</h3>
+    <h3>Location</h3>
   </div>
 </template>
 

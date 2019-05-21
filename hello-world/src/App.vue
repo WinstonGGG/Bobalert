@@ -1,16 +1,12 @@
 <template>
   <div id="app">
     <h1>Bobalert</h1>
-    <table>
-      <tr>
-        <th>Boba</th>
-        <th>Today</th>
-        <th>upcomming</th>
-        <th>Filter</th>
-      </tr>
-    </table>
-    <Fundraiser/>
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="topNavigation">
+      <a href="#boba">Boba</a>
+      <a class="active" href="#today">Today</a>
+      <a href="#upcoming">Upcoming Events</a>
+      <a href="#filter">Filter</a>
+    </div>
   </div>
 </template>
 
@@ -21,13 +17,15 @@ import Fundraiser from './components/Fundraiser.vue'
 export default {
   name: 'app',
   components: {
-    HelloWorld, 
+    HelloWorld,
     Fundraiser
   }
 }
 </script>
 
 <style>
+/* CSS Section */
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -35,5 +33,33 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+/* Add a black background color to the top navigation */
+.topNavigation {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topNavigation a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topNavigation a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topNavigation a.active {
+  background-color: #4CAF50;
+  color: white;
 }
 </style>
