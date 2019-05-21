@@ -1,6 +1,17 @@
 <template>
-  <div class="dropdown">
-
+  <div>
+    <a href="#" v-on:click.prevent="showDropDown=!showDropDown">
+      <div>Catness</div>
+      <!-- <img src="..." alt="avatar"> -->
+      <i :class="{ 'fa-caret-up': showDropDown, 'fa-caret-down': !showDropDown }" aria-hidden="true"></i>
+    </a>
+    <div v-if="showDropDown">
+      <ul>
+        <li :key="link.id" v-for="link in links">
+          <a href="#">{{link.name}}</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -9,6 +20,25 @@ export default {
   name: 'DropdownList',
   props: {
     name: String
+  },
+  data() {
+    return {
+      showDropDown: true,
+      links: [
+      {   
+          id: 1,
+          name: "Account"
+      },
+      {
+          id: 2,
+          name: "Profile"
+      },
+      {
+          id: 3,
+          name: "Logout"
+      }
+      ]
+    }
   }
 }
 </script>
