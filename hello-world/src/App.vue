@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <DropdownList/>
     <h1>Bobalert</h1>
     <table>
       <tr>
@@ -17,12 +18,14 @@
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import Fundraiser from './components/Fundraiser.vue'
+import DropdownList from './components/DropdownList.vue'
 
 export default {
   name: 'app',
   components: {
     HelloWorld, 
-    Fundraiser
+    Fundraiser,
+    DropdownList
   }
 }
 </script>
