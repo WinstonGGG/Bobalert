@@ -1,13 +1,16 @@
 <template>
   <div id="app">
     <DropdownList/>
-    <h1>Bobalert</h1>
+    <center> <img id="nameTitle" src=".\assets\bobalertlogo.png"> </center>
     <div class="topNavigation">
       <a href="#boba">Boba</a>
       <a class="active" href="#today">Today</a>
       <a href="#upcoming">Upcoming Events</a>
       <a href="#filter">Filter</a>
     </div>
+    <br>
+    <Fundraiser/>
+    <br>
   </div>
 </template>
 
@@ -38,9 +41,16 @@ export default {
   margin-top: 60px;
 }
 
-/* Add a black background color to the top navigation */
+/* Bobalert Logo Title */
+#nameTitle {
+  align: center;
+  width: 175px;
+  height: 105px;
+}
+
+/* Add a royal blue background color to the top navigation */
 .topNavigation {
-  background-color: #333;
+  background-color: #003c6c;
   overflow: hidden;
 }
 
@@ -49,7 +59,7 @@ export default {
   float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 9.5%;
   text-decoration: none;
   font-size: 17px;
 }
@@ -62,7 +72,7 @@ export default {
 
 /* Add a color to the active/current link */
 .topNavigation a.active {
-  background-color: #4CAF50;
+  background-color: #fdc700;
   color: white;
 }
 </style>
