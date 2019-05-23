@@ -1,18 +1,18 @@
 <template>
   <div id="app">
-    <DropdownList/>
-    <center> <img id="nameTitle" src=".\assets\bobalertlogo.png"> </center>
-    <router-link to="/detail/:fundID" class="topNavigation">
-      <a href="#boba">Boba</a>
-      <a class="active" href="#today">Today</a>
-      <a href="#upcoming">Upcoming Events</a>
-      <a href="#filter">Filter</a>
+    <center> <img id="nameTitle" src="./assets/bobalertlogo.png"> </center>
+    <router-link to="/detail/:fundID">
+      <div class="topNavigation">
+        <DropdownList/>
+        <a class="active" href="#today">Today</a>
+        <a href="#upcoming">Upcoming Events</a>
+        <a href="#filter">Filter</a>
+      </div>
     </router-link>
     <Filter/>
     <br>
     <Fundraiser/>
     <br>
->>>>>>> 339051ddb738f347889ce3ac2f7b53a94952e7f6
   </div>
 </template>
 

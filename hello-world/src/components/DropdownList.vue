@@ -1,7 +1,7 @@
 <template>
   <div>
     <a href="#" v-on:click.prevent="showDropDown=!showDropDown">
-      <div>Catness</div>
+      <div>Boba</div>
       <!-- <img src="..." alt="avatar"> -->
       <i :class="{ 'fa-caret-up': showDropDown, 'fa-caret-down': !showDropDown }" aria-hidden="true"></i>
     </a>
