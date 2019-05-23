@@ -18,13 +18,15 @@
 import HelloWorld from './components/HelloWorld.vue'
 import Fundraiser from './components/Fundraiser.vue'
 import DropdownList from './components/DropdownList.vue'
+import Filter from './components/DropdownList.vue'
 
 export default {
   name: 'app',
   components: {
     HelloWorld,
     Fundraiser,
-    DropdownList
+    DropdownList,
+    Filter
   }
 }
 </script>
