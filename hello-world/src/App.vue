@@ -2,12 +2,12 @@
   <div id="app">
     <DropdownList/>
     <h1>Bobalert</h1>
-    <div class="topNavigation">
+    <router-link to="/detail/:fundID" class="topNavigation">
       <a href="#boba">Boba</a>
       <a class="active" href="#today">Today</a>
       <a href="#upcoming">Upcoming Events</a>
       <a href="#filter">Filter</a>
-    </div>
+    </router-link>
     <Filter/>
   </div>
 </template>
@@ -24,7 +24,7 @@ export default {
     HelloWorld,
     Fundraiser,
     DropdownList,
-    Filter
+    Filter,
   }
 }
 </script>
