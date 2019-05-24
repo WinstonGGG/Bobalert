@@ -5,9 +5,8 @@
       <DropdownList/>
       <a class="active" href="../">Today</a>
       <a href="#upcoming">Upcoming Events</a>
-      <a href="#filter">Filter</a>
+      <Filter/>
     </div>
-    <Filter/>
     <br>
     <router-view></router-view>
     <br>
