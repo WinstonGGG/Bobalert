@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <!-- <h2>{{this.$route.query.fundID}}</h2> -->
-    <h2>Fund Event</h2>
+    <h2>{{this.$route.query.fundID}}</h2>
+    <!-- <h2>Fund Event</h2> -->
     <!-- <h3>{{'Organization Name: ' + getFundraiserInfo(this.$route.query.fundID).Org}}</h3>
     <h3>{{'Location: ' + getFundraiserInfo(this.$route.query.fundID).Location}}</h3> -->
     <h3>Time: May 29(Wed), 11:30AM-2:30PM</h3>

@@ -3,28 +3,28 @@
     <center> <img id="nameTitle" src="../../assets/bobalertlogo.png"> </center>
     <div class="topNavigation">
       <DropdownList/>
-      <a class="active" href="#today">Today</a>
+      <a class="active" href="../">Today</a>
       <a href="#upcoming">Upcoming Events</a>
       <a href="#filter">Filter</a>
     </div>
     <Filter/>
     <br>
-    <Fundraiser/>
+    <router-view></router-view>
     <br>
   </div>
 </template>
 
 <script>
 import HelloWorld from '../../components/HelloWorld.vue'
-import Fundraiser from '../../components/Fundraiser.vue'
 import DropdownList from '../../components/DropdownList.vue'
 import Filter from '../../components/Filter.vue'
+import MainContent from '../../components/MainContent.vue'
 
 export default {
   name: 'app',
   components: {
     HelloWorld,
-    Fundraiser,
+    MainContent,
     DropdownList,
     Filter,
   }
