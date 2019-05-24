@@ -1,14 +1,12 @@
 <template>
   <div id="app">
-    <center> <img id="nameTitle" src="./assets/bobalertlogo.png"> </center>
-    <router-link to="/detail/:fundID">
-      <div class="topNavigation">
-        <DropdownList/>
-        <a class="active" href="#today">Today</a>
-        <a href="#upcoming">Upcoming Events</a>
-        <a href="#filter">Filter</a>
-      </div>
-    </router-link>
+    <center> <img id="nameTitle" src="../../assets/bobalertlogo.png"> </center>
+    <div class="topNavigation">
+      <DropdownList/>
+      <a class="active" href="#today">Today</a>
+      <a href="#upcoming">Upcoming Events</a>
+      <a href="#filter">Filter</a>
+    </div>
     <Filter/>
     <br>
     <Fundraiser/>
@@ -17,10 +15,10 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import Fundraiser from './components/Fundraiser.vue'
-import DropdownList from './components/DropdownList.vue'
-import Filter from './components/DropdownList.vue'
+import HelloWorld from '../../components/HelloWorld.vue'
+import Fundraiser from '../../components/Fundraiser.vue'
+import DropdownList from '../../components/DropdownList.vue'
+import Filter from '../../components/Filter.vue'
 
 export default {
   name: 'app',

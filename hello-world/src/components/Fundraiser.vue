@@ -1,41 +1,69 @@
 <template>
   <div class="fund">
-    <div class="border">
-      <div id="fundraiserTitle">
-        <h2>Cool Tea Bar Boba Fundraiser</h2>
+    <!-- <router-link :to="{path: 'fundDetail', query: {fundID: 'VSA'}}"> -->
+    <router-link :to="{path: 'fundDetail'}">
+      <div class="border">
+        <div id="fundraiserTitle">
+          <h2>Cool Tea Bar Boba Fundraiser</h2>
+        </div>
+        <h3>Vietnamese Student Association</h3>
+        <h3>Location: Science n Engineering Library</h3>
+        <h3>Time: Today at 12 PM – 6 PM </h3>
       </div>
-      <h3>Vietnamese Student Association</h3>
-      <h3>Location: Science n Engineering Library</h3>
-      <h3>Time: Today at 12 PM – 6 PM </h3>
+    </router-link>
+    <br>
+    <div>
+      <div class="border">
+        <a href="fundDetail">AAA</a>
+        <div id="fundraiserTitle">
+          <h2>TPUMPS Boba Fundraiser</h2>
+        </div>
+        <h3>Circle K International</h3>
+        <h3>Location: Quarry Plaza</h3>
+        <h3>Time: Today at 10 AM - 3 PM </h3>
+      </div>
     </div>
     <br>
-    <div class="border">
-      <div id="fundraiserTitle">
-        <h2>TPUMPS Boba Fundraiser</h2>
+    <router-link :to="'/detail/' + 'CSA'">
+      <div class="border">
+        <div id="fundraiserTitle">
+          <h2>Quicklys Boba Fundraiser</h2>
+        </div>
+        <h3>Chinese Student Association </h3>
+        <h3>Location: Science n Engineering Library </h3>
+        <h3>Time: Today at 11 AM - 4 PM </h3>
       </div>
-      <h3>Circle K International</h3>
-      <h3>Location: Quarry Plaza</h3>
-      <h3>Time: Today at 10 AM - 3 PM </h3>
-    </div>
-    <br>
-    <div class="border">
-      <div id="fundraiserTitle">
-        <h2>Quicklys Boba Fundraiser</h2>
-      </div>
-      <h3>Chinese Student Association </h3>
-      <h3>Location: Science n Engineering Library </h3>
-      <h3>Time: Today at 11 AM - 4 PM </h3>
-    </div>
+    </router-link>
   </div>
 
 </template>
 
 <script>
+import VueRouter from 'vue-router'
+import Vue from 'vue'
+import FundraiserEvent from '../pages/fundraiserDetail/FundraiserEvent.vue'
+
+Vue.use(VueRouter)
+
+// console.log("debug" + $route.params.fundID);
+
+const routes = [
+  { path: '/detail/:fundID', component: FundraiserEvent},
+  { path: '/fundDetail', component: FundraiserEvent},
+]
+
+const router = new VueRouter({
+  mode: 'history',
+  base: __dirname,
+  routes // short for `routes: routes`
+})
+
 export default {
   name: 'Fundrasier',
   props: {
-    name: String
-  }
+    fundID: String
+  },
+  router
 }
 </script>
 
@@ -71,9 +99,11 @@ a {
   padding-bottom: 20px;
   background-color: #EEEEEE;
   width: 60%;
+  height: 192px;
   margin-top: auto;
   margin-left: auto;
   margin-right: auto;
   box-shadow: 1px 1px #bbbb;
 }
+
 </style>

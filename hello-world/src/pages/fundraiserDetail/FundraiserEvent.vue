@@ -1,8 +1,9 @@
 <template>
-  <div class="fund">
-    <h2>{{fundID}}</h2>
-    <h3>{{'Organization Name: ' + getFundraiserInfo(fundraiserName).Org}}</h3>
-    <h3>{{'Location: ' + getFundraiserInfo(fundraiserName).Org}}</h3>
+  <div id="app">
+    <!-- <h2>{{this.$route.query.fundID}}</h2> -->
+    <h2>Fund Event</h2>
+    <!-- <h3>{{'Organization Name: ' + getFundraiserInfo(this.$route.query.fundID).Org}}</h3>
+    <h3>{{'Location: ' + getFundraiserInfo(this.$route.query.fundID).Location}}</h3> -->
     <h3>Time: May 29(Wed), 11:30AM-2:30PM</h3>
     <h3>Contact Info: </h3>
     <h4>Joseph Yuan</h4>
@@ -13,11 +14,16 @@
 
 <script>
 export default {
-  name: 'Fundrasier',
-  props: ['fundID'], 
+  name: 'fundDetail',
+  props: {
+    fundID: {
+      type: String,
+      default: 'No Fundraiser Fund'
+    }
+  },
   methods: {
-    getFundraiserInfo(fundID) {
-      if (fundID == 'CSSA Boba Fundraiser'){
+    getFundraiserInfo (fundID) {
+      if (fundID === 'CSSA Boba Fundraiser') {
         return {
           Org: 'CSSA',
           Location: 'Quarry Plaza'

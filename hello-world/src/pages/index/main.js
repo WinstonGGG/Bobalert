@@ -1,22 +1,12 @@
 import Vue from 'vue'
-import VueRouter from 'vue'
 import App from './App.vue'
-import FundraiserEvent from './components/FundraiserEvent.vue'
 
 Vue.config.productionTip = false
 
-const routes = [
-  { path: '/detail/:fundID', component: FundraiserEvent, props: true},
-]
-
-const router = new VueRouter({
-  routes // short for `routes: routes`
-})
-
 new Vue({
   render: h => h(App),
-  router
 }).$mount('#app')
+
 
 // // Firebase App (the core Firebase SDK) is always required and
 // // must be listed before other Firebase SDKs
