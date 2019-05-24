@@ -1,7 +1,7 @@
 <template>
   <div class="fund">
-    <!-- <router-link :to="{path: 'fundDetail', query: {fundID: 'VSA'}}"> -->
-    <router-link :to="{path: 'fundDetail'}">
+    <router-link @click="reload()" :to="{path: 'fundDetail', query: {fundID: 'VSA'}}">
+    <!-- <router-link :to="{path: 'fundDetail'}"> -->
       <div class="border">
         <div id="fundraiserTitle">
           <h2>Cool Tea Bar Boba Fundraiser</h2>
@@ -62,6 +62,11 @@ export default {
   name: 'Fundrasier',
   props: {
     fundID: String
+  },
+   methods: {
+    reload: function() {    
+       this.$router.go(this.$router.currentRoute)
+    }
   },
   router
 }
