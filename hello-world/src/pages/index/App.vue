@@ -5,7 +5,7 @@
       <DropdownList class="link"/>
       <a class="active link" href="../"><div class="menu">Today</div></a>
       <a class="link" href="#upcoming link"><div class="menu">Upcoming</div></a>
-      <Filter class="link"/>
+      <FilterComponent class="link"/>
     </div>
     <br>
     <router-view></router-view>
@@ -16,7 +16,7 @@
 <script>
 import HelloWorld from '../../components/HelloWorld.vue'
 import DropdownList from '../../components/DropdownList.vue'
-import Filter from '../../components/Filter.vue'
+import FilterComponent from '../../components/Filter.vue'
 import MainContent from '../../components/MainContent.vue'
 
 export default {
@@ -25,7 +25,7 @@ export default {
     HelloWorld,
     MainContent,
     DropdownList,
-    Filter,
+    FilterComponent
   }
 }
 </script>

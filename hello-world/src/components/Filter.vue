@@ -1,9 +1,15 @@
 <template>
-  <div class="filter">
-    <h2>Location</h2>
-    <h3>Mchenry</h3>
-    <h3>SnE</h3>
-    <h3>Others</h3>
+  <div>
+    <div v-on:click.prevent="showDropDown=!showDropDown">
+      <div class="menu">Filters</div>
+      <!-- <img src="..." alt="avatar"> -->
+      <i :class="{ 'fa-caret-up': showDropDown, 'fa-caret-down': !showDropDown }" aria-hidden="true"></i>
+    </div>
+    <div v-if="showDropDown" class="dropdown-content">
+      <div :key="link.id" v-for="link in links">
+        <a :href="'/' + link.link">{{link.name}}</a>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -12,24 +18,54 @@ export default {
   name: 'Filter',
   props: {
     name: String
+  },
+  data() {
+    return {
+      showDropDown: true,
+      links: [
+      {   
+          id: 1,
+          name: "SNE",
+          link: 'sne'
+      },
+      {
+          id: 2,
+          name: "Quary Plaza",
+          link: 'quary'
+      },
+      {
+          id: 3,
+          name: "All",
+          link: ''
+      }
+      ]
+    }
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  position: absolute;
+  z-index: 2;
+  width: 24.5%;
+  background-color: #003c6c;
   list-style-type: none;
   padding: 0;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+.dropdown-content div {
+  padding: 14px 9.5%;
+  font-size: 17px;
+  float: none;
+  text-decoration: none;
+  /* display: block; */
 }
-a {
-  color: #42b983;
+.dropdown-content div a {
+  margin-left: 0;
+  width: 84%;
+  text-align: center;
+  color: #f2f2f2;
 }
 </style>
