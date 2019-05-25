@@ -1,10 +1,7 @@
 <template>
   <div class="fund">
-    <Fundraiser :fundID="'VSA'"/>
-    <br>
-    <Fundraiser :fundID="'CKI'"/>
-    <br>
-    <Fundraiser :fundID="'CSA'"/>
+    <Fundraiser v-if="isThisCategory(1)" :fundID="1" />
+    <Fundraiser v-if="isThisCategory(2)" :fundID="2" />
   </div>
 </template>
 
@@ -13,11 +10,26 @@ import Fundraiser from '../components/Fundraiser.vue'
 
 export default {
   name: 'MainContent',
-  props: {
-    fundID: String
-  },
   components: {
     Fundraiser
+  },
+  props: {
+    category: {
+      type: String,
+      default: 'all'
+    }
+  },
+  methods: {
+    isThisCategory (fundID) {
+      return this.getFundraiserCategory(fundID) === this.category || this.category === 'all'
+    },
+    getFundraiserCategory (fundID) {
+      if (fundID === 1) {
+        return 'drink';
+      } else if (fundID === 2) {
+        return 'food';
+      }
+    }
   }
 }
 </script>

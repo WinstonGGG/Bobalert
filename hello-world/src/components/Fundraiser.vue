@@ -3,12 +3,13 @@
     <router-link :to="{path: 'fundDetail', query: {fundID: fundID}}">
       <div class="border">
         <div id="fundraiserTitle">
-          <h2>Cool Tea Bar Boba Fundraiser</h2>
+          <h2>{{getFundraiserInfo (fundID).name}}</h2>
         </div>
-        <h3>Vietnamese Student Association</h3>
-        <h3>Location: Science n Engineering Library</h3>
-        <h3>Time: Today at 12 PM – 6 PM </h3>
+        <h3>{{getFundraiserInfo (fundID).org}}</h3>
+        <h3>{{getFundraiserInfo (fundID).location}}</h3>
+        <h3>{{getFundraiserInfo (fundID).time}}</h3>
       </div>
+      <br>
     </router-link>
   </div>
 </template>
@@ -17,7 +18,33 @@
 export default {
   name: 'Fundrasier',
   props: {
-    fundID: String
+    fundID: Number
+  }, 
+  methods: {
+    getFundraiserInfo (fundID) {
+      if (fundID === 1) {
+        return {
+          name: 'Cool Tea Bar Boba Fundraiser',
+          org: 'Vietnamese Student Association',
+          location: 'SNE Library',
+          time: 'Time: Today at 12 PM – 6 PM'
+        }
+      } else if (fundID === 2) {
+        return {
+          name: 'KBBQ Fundraiser',
+          org: 'Korean American Student Association',
+          location: 'Quarry Plaza',
+          time: 'Time: Today at 12 PM – 3 PM'
+        }
+      } else {
+        return {
+          name: 'No Fundraiser Fund',
+          org: '',
+          location: '',
+          time: ''
+        }
+      }
+    }
   }
 }
 </script>

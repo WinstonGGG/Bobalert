@@ -1,14 +1,14 @@
 <template>
   <div id="app">
-    <h2>{{this.$route.query.fundID}}</h2>
+    <h2>{{getFundraiserInfo(this.$route.query.fundID).name}}</h2>
     <!-- <h2>Fund Event</h2> -->
-    <!-- <h3>{{'Organization Name: ' + getFundraiserInfo(this.$route.query.fundID).Org}}</h3>
-    <h3>{{'Location: ' + getFundraiserInfo(this.$route.query.fundID).Location}}</h3> -->
-    <h3>Time: May 29(Wed), 11:30AM-2:30PM</h3>
+    <h3>{{'Organization Name: ' + getFundraiserInfo(this.$route.query.fundID).org}}</h3>
+    <h3>{{'Location: ' + getFundraiserInfo(this.$route.query.fundID).location}}</h3>
+    <h3>{{'Time: ' + getFundraiserInfo(this.$route.query.fundID).time}}</h3>
     <h3>Contact Info: </h3>
     <h4>Joseph Yuan</h4>
     <h4>(408)678-9999</h4>
-    <h3>Additional Info: </h3>
+    <h3>Additional Info: No</h3>
   </div>
 </template>
 
@@ -23,15 +23,26 @@ export default {
   },
   methods: {
     getFundraiserInfo (fundID) {
-      if (fundID === 'CSSA Boba Fundraiser') {
+      if (fundID === 1) {
         return {
-          Org: 'CSSA',
-          Location: 'Quarry Plaza'
+          name: 'Cool Tea Bar Boba Fundraiser',
+          org: 'Vietnamese Student Association',
+          location: 'SNE Library',
+          time: 'Time: Today at 12 PM – 6 PM'
+        }
+      } else if (fundID === 2) {
+        return {
+          name: 'KBBQ Fundraiser',
+          org: 'Korean American Student Association',
+          location: 'Quarry Plaza',
+          time: 'Time: Today at 12 PM – 3 PM'
         }
       } else {
         return {
-          Org: 'NULL',
-          Location: 'Quarry Plaza'
+          name: 'No Fundraiser Fund',
+          org: '',
+          location: '',
+          time: ''
         }
       }
     }

@@ -2,10 +2,10 @@
   <div id="app">
     <center> <img id="nameTitle" src="../../assets/bobalertlogo.png"> </center>
     <div class="topNavigation">
-      <DropdownList/>
-      <a class="active" href="../">Today</a>
-      <a href="#upcoming">Upcoming Events</a>
-      <Filter/>
+      <DropdownList class="link"/>
+      <a class="active link" href="../"><div class="menu">Today</div></a>
+      <a class="link" href="#upcoming link"><div class="menu">Upcoming</div></a>
+      <Filter class="link"/>
     </div>
     <br>
     <router-view></router-view>
@@ -56,23 +56,25 @@ export default {
 }
 
 /* Style the links inside the navigation bar */
-.topNavigation a {
+.topNavigation .link {
   float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 9.5%;
   text-decoration: none;
   font-size: 17px;
+  width: 25%;
 }
-
+.topNavigation .link .menu {
+  padding: 14px 9.5%;
+}
 /* Change the color of links on hover */
-.topNavigation a:hover {
+.topNavigation .link:hover {
   background-color: #ddd;
   color: black;
 }
 
 /* Add a color to the active/current link */
-.topNavigation a.active {
+.topNavigation .link.active {
   background-color: #fdc700;
   color: white;
 }

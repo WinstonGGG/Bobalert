@@ -1,13 +1,13 @@
 <template>
-  <div class="dropdown">
-    <a href="#" v-on:click.prevent="showDropDown=!showDropDown">
-      <div>Boba</div>
+  <div>
+    <div v-on:click.prevent="showDropDown=!showDropDown">
+      <div class="menu">All</div>
       <!-- <img src="..." alt="avatar"> -->
       <i :class="{ 'fa-caret-up': showDropDown, 'fa-caret-down': !showDropDown }" aria-hidden="true"></i>
-    </a>
+    </div>
     <div v-if="showDropDown" class="dropdown-content">
       <div :key="link.id" v-for="link in links">
-        <a href="#">{{link.name}}</a>
+        <a :href="'/' + link.link">{{link.name}}</a>
       </div>
     </div>
   </div>
@@ -25,15 +25,18 @@ export default {
       links: [
       {   
           id: 1,
-          name: "Account"
+          name: "Drinks",
+          link: 'drink'
       },
       {
           id: 2,
-          name: "Profile"
+          name: "Food",
+          link: 'food'
       },
       {
           id: 3,
-          name: "Logout"
+          name: "All",
+          link: ''
       }
       ]
     }
@@ -43,15 +46,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.dropdown {
-  width: 300px;
-}
 /* Dropdown content (hidden by default) */
 .dropdown-content {
-  margin-top: 50px;
   position: absolute;
   z-index: 2;
-  width: 97px;
+  width: 24.5%;
   background-color: #003c6c;
   list-style-type: none;
   padding: 0;
@@ -67,5 +66,6 @@ export default {
   margin-left: 0;
   width: 84%;
   text-align: center;
+  color: #f2f2f2;
 }
 </style>

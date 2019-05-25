@@ -12,6 +12,9 @@ Vue.use(VueRouter)
 
 const routes = [
   { path: '/', component: MainContent },
+  // { path: '/:category', component: MainContent, props: true },
+  { path: '/drink', component: MainContent, props: { category: 'drink' } },
+  { path: '/food', component: MainContent, props: { category: 'food' } },
   { path: '/fundDetail', component: FundraiserEvent },
   // { path: '/fundDetail', component: FundraiserEvent }
 ]
