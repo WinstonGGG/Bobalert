@@ -6,9 +6,10 @@
       <i :class="{ 'fa-caret-up': showDropDown, 'fa-caret-down': !showDropDown }" aria-hidden="true"></i>
     </div>
     <div v-if="showDropDown" class="dropdown-content">
-      <div :key="link.id" v-for="link in links">
-        <a :href="'/' + link.link">{{link.name}}</a>
-      </div>
+      <input type="checkbox" name="vehicle1" value="Quarry">Quarry<br>
+      <input type="checkbox" name="vehicle2" value="SnE">SnE<br>
+      <input type="checkbox" name="vehicle3" value="All" checked>All<br><br>
+      <input type="submit" value="Apply">
     </div>
   </div>
 </template>
@@ -21,24 +22,7 @@ export default {
   },
   data() {
     return {
-      showDropDown: true,
-      links: [
-      {   
-          id: 1,
-          name: "SNE",
-          link: 'sne'
-      },
-      {
-          id: 2,
-          name: "Quary Plaza",
-          link: 'quary'
-      },
-      {
-          id: 3,
-          name: "All",
-          link: ''
-      }
-      ]
+      showDropDown: true
     }
   }
 }
