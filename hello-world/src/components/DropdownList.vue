@@ -21,7 +21,7 @@ export default {
   },
   data() {
     return {
-      showDropDown: true,
+      showDropDown: false,
       links: [
       {   
           id: 1,

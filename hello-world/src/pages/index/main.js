@@ -11,7 +11,8 @@ Vue.use(VueRouter)
 // console.log("debug" + $route.params.fundID);
 
 const routes = [
-  { path: '/', component: MainContent },
+  { path: '/', component: MainContent, props: { upcoming: false } },
+  { path: '/upcoming', component: MainContent, props: { upcoming: true } },
   // { path: '/:category', component: MainContent, props: true },
   { path: '/drink', component: MainContent, props: { category: 'drink' } },
   { path: '/food', component: MainContent, props: { category: 'food' } },

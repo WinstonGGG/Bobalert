@@ -4,7 +4,7 @@
     <div class="topNavigation">
       <DropdownList class="link"/>
       <a class="active link" href="../"><div class="menu">Today</div></a>
-      <a class="link" href="#upcoming link"><div class="menu">Upcoming</div></a>
+      <a class="link" href="upcoming"><div class="menu">Upcoming</div></a>
       <FilterComponent class="link"/>
     </div>
     <br>

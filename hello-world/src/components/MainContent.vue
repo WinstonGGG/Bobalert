@@ -1,7 +1,7 @@
 <template>
   <div class="fund">
-    <Fundraiser v-if="isThisCategory(1)" :fundID="1" />
-    <Fundraiser v-if="isThisCategory(2)" :fundID="2" />
+    <Fundraiser v-if="isThisCategory(1)" :fundID="1" :upcoming="upcoming" />
+    <Fundraiser v-if="isThisCategory(2)" :fundID="2" :upcoming="upcoming" />
   </div>
 </template>
 
@@ -17,6 +17,10 @@ export default {
     category: {
       type: String,
       default: 'all'
+    }, 
+    upcoming: {
+      type: Boolean,
+      default: false
     }
   },
   methods: {

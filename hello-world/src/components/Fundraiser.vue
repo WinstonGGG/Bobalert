@@ -1,16 +1,16 @@
 <template>
   <div class="fund">
-    <router-link :to="{path: 'fundDetail', query: {fundID: fundID}}">
-      <div class="border">
+    <div class="border">
+      <router-link :to="{path: 'fundDetail', query: {fundID: fundID}}">
         <div id="fundraiserTitle">
-          <h2>{{getFundraiserInfo (fundID).name}}</h2>
+          <h2>{{ getFundraiserInfo (fundID).name }}</h2>
         </div>
-        <h3>{{getFundraiserInfo (fundID).org}}</h3>
-        <h3>{{getFundraiserInfo (fundID).location}}</h3>
-        <h3>{{getFundraiserInfo (fundID).time}}</h3>
-      </div>
-      <br>
-    </router-link>
+        <h3>{{ getFundraiserInfo (fundID).org }}</h3>
+        <h3>{{ getFundraiserInfo (fundID).location }}</h3>
+        <h3>{{ getFundraiserInfo (fundID).time }}</h3>
+      </router-link>
+    </div>
+    <br>
   </div>
 </template>
 
@@ -18,16 +18,26 @@
 export default {
   name: 'Fundrasier',
   props: {
-    fundID: Number
-  }, 
+    fundID: Number,
+    upcoming: Boolean
+  },
   methods: {
     getFundraiserInfo (fundID) {
       if (fundID === 1) {
-        return {
-          name: 'Cool Tea Bar Boba Fundraiser',
-          org: 'Vietnamese Student Association',
-          location: 'SNE Library',
-          time: 'Time: Today at 12 PM – 6 PM'
+        if (this.upcoming == true) {
+          return {
+            name: 'Cool Tea Bar Boba Fundraiser',
+            org: 'Vietnamese Student Association',
+            location: 'SNE Library',
+            time: 'Time: Today at 12 PM – 6 PM'
+          }
+        } else {
+          return {
+            name: 'Pokoe Boba Fundraiser',
+            org: 'Model United Nation',
+            location: 'Quarry Plaza',
+            time: 'Time: Today at 12 PM – 6 PM'
+          }
         }
       } else if (fundID === 2) {
         return {
