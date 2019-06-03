@@ -7,7 +7,7 @@
     </div>
     <div v-if="showDropDown" class="dropdown-content">
       <div :key="link.id" v-for="link in links">
-        <a :href="'/' + link.link">{{link.name}}</a>
+        <a :href="'/' + getLinkName(link.path)">{{ link.name }}</a>
       </div>
     </div>
   </div>
@@ -19,6 +19,20 @@ export default {
   props: {
     name: String
   },
+  props: {
+    upcoming: {
+      type: Boolean,
+      default: false
+    }
+  },
+  methods: {
+    getLinkName (path) {
+      if (this.upcoming) {
+        return 'upcoming' + path
+      } else 
+        return path
+    }
+  },
   data() {
     return {
       showDropDown: false,
@@ -26,17 +40,17 @@ export default {
       {   
           id: 1,
           name: "Drinks",
-          link: 'drink'
+          path: 'drink'
       },
       {
           id: 2,
           name: "Food",
-          link: 'food'
+          path: 'food'
       },
       {
           id: 3,
           name: "All",
-          link: ''
+          path: ''
       }
       ]
     }

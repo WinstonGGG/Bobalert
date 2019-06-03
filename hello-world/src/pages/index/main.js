@@ -16,6 +16,8 @@ const routes = [
   // { path: '/:category', component: MainContent, props: true },
   { path: '/drink', component: MainContent, props: { category: 'drink' } },
   { path: '/food', component: MainContent, props: { category: 'food' } },
+  { path: '/upcomingdrink', component: MainContent, props: { category: 'drink', upcoming: true } },
+  { path: '/upcomingfood', component: MainContent, props: { category: 'food',  upcoming: true } },
   { path: '/fundDetail', component: FundraiserEvent },
   // { path: '/fundDetail', component: FundraiserEvent }
 ]

@@ -18,26 +18,16 @@
 export default {
   name: 'Fundrasier',
   props: {
-    fundID: Number,
-    upcoming: Boolean
+    fundID: Number
   },
   methods: {
     getFundraiserInfo (fundID) {
       if (fundID === 1) {
-        if (this.upcoming == true) {
-          return {
-            name: 'Cool Tea Bar Boba Fundraiser',
-            org: 'Vietnamese Student Association',
-            location: 'SNE Library',
-            time: 'Time: Today at 12 PM – 6 PM'
-          }
-        } else {
-          return {
-            name: 'Pokoe Boba Fundraiser',
-            org: 'Model United Nation',
-            location: 'Quarry Plaza',
-            time: 'Time: Today at 12 PM – 6 PM'
-          }
+        return {
+          name: 'Cool Tea Bar Boba Fundraiser',
+          org: 'Vietnamese Student Association',
+          location: 'SNE Library',
+          time: 'Time: Today at 12 PM – 6 PM'
         }
       } else if (fundID === 2) {
         return {
@@ -46,6 +36,13 @@ export default {
           location: 'Quarry Plaza',
           time: 'Time: Today at 12 PM – 3 PM'
         }
+      } else if (fundID === 3) {
+        return {
+            name: 'Pokoe Boba Fundraiser',
+            org: 'Model United Nation',
+            location: 'Quarry Plaza',
+            time: 'Time: Today at 12 PM – 6 PM'
+          }
       } else {
         return {
           name: 'No Fundraiser Fund',

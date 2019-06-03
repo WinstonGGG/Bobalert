@@ -1,23 +1,27 @@
 <template>
   <div class="fund">
-    <Fundraiser v-if="isThisCategory(1)" :fundID="1" :upcoming="upcoming" />
-    <Fundraiser v-if="isThisCategory(2)" :fundID="2" :upcoming="upcoming" />
+    <NavBar :upcoming="this.upcoming" />
+    <Fundraiser :fundID="1" v-show="isThisCategory(1) && isUpcoming(1)" />
+    <Fundraiser :fundID="2" v-show="isThisCategory(2) && isUpcoming(2)" />
+    <Fundraiser :fundID="3" v-show="isThisCategory(3) && isUpcoming(3)" />
   </div>
 </template>
 
 <script>
 import Fundraiser from '../components/Fundraiser.vue'
+import NavBar from '../components/NavBar.vue'
 
 export default {
   name: 'MainContent',
   components: {
-    Fundraiser
+    Fundraiser,
+    NavBar
   },
   props: {
     category: {
       type: String,
       default: 'all'
-    }, 
+    },
     upcoming: {
       type: Boolean,
       default: false
@@ -29,9 +33,20 @@ export default {
     },
     getFundraiserCategory (fundID) {
       if (fundID === 1) {
-        return 'drink';
+        return 'drink'
       } else if (fundID === 2) {
-        return 'food';
+        return 'food'
+      } else if (fundID === 3) {
+        return 'drink'
+      }
+    },
+    isUpcoming (fundID) {
+      if (fundID === 1) {
+        return this.upcoming === true
+      } else if (fundID === 2) {
+        return this.upcoming === true
+      } else if (fundID === 3) {
+        return this.upcoming === false
       }
     }
   }
