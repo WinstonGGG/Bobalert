@@ -126,7 +126,7 @@ a {
   font-size: 14px;
   border: 1px solid #bbbb;
   border-radius: 3px;
-  padding-bottom: 5%;
+  padding-bottom: 10px;
   background-color: #EEEEEE;
   width: 60%;
   margin-top: 10px;
