@@ -7,7 +7,7 @@
     </div>
     <div v-if="showDropDown" class="dropdown-content">
       <div :key="link.id" v-for="link in links">
-        <a :href="'/' + getLinkName(link.path)">{{ link.name }}</a>
+        <a :class="{ active: link.path == category }" :href="'/' + getLinkName(link.path)">{{ link.name }}</a>
       </div>
     </div>
   </div>
@@ -23,6 +23,10 @@ export default {
     upcoming: {
       type: Boolean,
       default: false
+    }, 
+    category: {
+      type: String,
+      default: 'all'
     }
   },
   methods: {
@@ -81,5 +85,11 @@ export default {
   width: 84%;
   text-align: center;
   color: #f2f2f2;
+}
+.active {
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
 }
 </style>
