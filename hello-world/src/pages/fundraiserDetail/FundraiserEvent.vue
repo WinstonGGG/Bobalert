@@ -1,15 +1,17 @@
 <template>
   <div id="app">
     <NavBar />
-    <h2>{{getFundraiserInfo(this.$route.query.fundID).name}}</h2>
-    <!-- <h2>Fund Event</h2> -->
-    <h3>{{'Organization Name: ' + getFundraiserInfo(this.$route.query.fundID).org}}</h3>
-    <h3>{{'Location: ' + getFundraiserInfo(this.$route.query.fundID).location}}</h3>
-    <h3>{{'Time: ' + getFundraiserInfo(this.$route.query.fundID).time}}</h3>
-    <h3>Contact Info: </h3>
-    <h4>Joseph Yuan</h4>
-    <h4>(408)678-9999</h4>
-    <h3>Additional Info: No</h3>
+    <div class="border">
+      <h2>{{getFundraiserInfo(this.$route.query.fundID).name}}</h2>
+      <!-- <h2>Fund Event</h2> -->
+      <h3>{{'Organization Name: ' + getFundraiserInfo(this.$route.query.fundID).org}}</h3>
+      <h3>{{'Location: ' + getFundraiserInfo(this.$route.query.fundID).location}}</h3>
+      <h3>{{'Time: ' + getFundraiserInfo(this.$route.query.fundID).time}}</h3>
+      <h3>Contact Info: </h3>
+      <h4>Joseph Yuan</h4>
+      <h4>(408) 678-9999</h4>
+      <h3>Additional Info: We accept Venmo and Cash!</h3>
+    </div>
   </div>
 </template>
 
@@ -78,5 +80,21 @@ li {
 }
 a {
   color: #42b983;
+}
+
+.border {
+  font-family: "Calibri",sans-serif, monospace;
+  line-height: 0.5;
+  font-size: 14px;
+  border: 1px solid #bbbb;
+  border-radius: 3px;
+  padding-bottom: 5%;
+  background-color: #EEEEEE;
+  width: 60%;
+  height: 2%;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 1px 1px #bbbb;
 }
 </style>
