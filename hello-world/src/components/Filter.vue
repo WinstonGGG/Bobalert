@@ -6,10 +6,10 @@
       <i :class="{ 'fa-caret-up': showDropDown, 'fa-caret-down': !showDropDown }" aria-hidden="true"></i>
     </div>
     <div v-if="showDropDown" class="dropdown-content">
-      <input type="checkbox" name="location1" v-model="quarry">Quarry<br>
-      <input type="checkbox" name="location2" v-model="sne">SnE<br>
-      <input type="checkbox" name="location3" v-model="others" checked>All<br><br>
-      <label for="Apply"</label>
+      <h1> Locations: </h1>
+      <input type="checkbox" id="location" v-model="quarry">Quarry<br>
+      <input type="checkbox" id="location" v-model="sne">SnE<br>
+      <input type="checkbox" id="location" v-model="others" checked>All<br><br>
       <input type="button" onclick="submitFunction()" id="Apply" value="Apply">
     </div>
   </div>
@@ -50,13 +50,23 @@ export default {
 input[type=checkbox] {
   position: relative;
   display: flex;
-  margin-left: 100px;
+  margin-left: 120px;
   margin-bottom: -16px;
   margin-top: 20px;
+  color: #f2f2f2;
+
 }
 
 input[type=button]{
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   font-size: 17px;
 }
+
+h1{
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  text-align: center;
+  font-size: 17px;
+  color: #f2f2f2;
+}
+
 </style>
