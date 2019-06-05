@@ -25,14 +25,14 @@ export default {
           name: 'Cool Tea Bar Boba Fundraiser',
           org: 'Vietnamese Student Association',
           location: 'SNE Library',
-          time: 'Time: Today at 12 PM – 6 PM'
+          time: 'Time: June 6 at 12 PM – 6 PM'
         }
       } else if (fundID === 2) {
         return {
           name: 'KBBQ Fundraiser',
           org: 'Korean American Student Association',
           location: 'Quarry Plaza',
-          time: 'Time: Today at 12 PM – 3 PM'
+          time: 'Time: June 6 at 12 PM – 3 PM'
         }
       } else if (fundID === 3) {
         return {
@@ -40,6 +40,48 @@ export default {
             org: 'Model United Nation',
             location: 'Quarry Plaza',
             time: 'Time: Today at 12 PM – 6 PM'
+          }
+      } else if (fundID === 4) {
+        return {
+            name: 'Spam Musubi Fundraiser',
+            org: 'Santa Cruz Dragon Boat',
+            location: 'SNE Library',
+            time: 'Time: Today at 12 PM – 6 PM'
+          }
+      } else if (fundID === 5) {
+        return {
+            name: 'Pokoe Boba Fundraiser',
+            org: 'Model United Nation',
+            location: 'Quarry Plaza',
+            time: 'Time: June 7th at 12 PM – 6 PM'
+          }
+      } else if (fundID === 6) {
+        return {
+            name: 'Happy Lemon Fundraiser',
+            org: 'Chinese Student Association',
+            location: 'Quarry Plaza',
+            time: 'Time: Today at 12 PM – 6 PM'
+          }
+      } else if (fundID === 7) {
+        return {
+            name: 'Braised Pork Rice Fundraiser',
+            org: 'Taiwanese Student Association',
+            location: 'Quarry Plaza',
+            time: 'Time: Today at 12 PM – 6 PM'
+          }
+      } else if (fundID === 8) {
+        return {
+            name: 'Dry Pot Fundraiser',
+            org: 'Peach Perfect',
+            location: 'Quarry Plaza',
+            time: 'Time: June 7th at 12 PM – 2 PM'
+          }
+      } else if (fundID === 9) {
+        return {
+            name: 'Poke House Fundraiser',
+            org: 'Vietnamese Student Association',
+            location: 'Quarry Plaza',
+            time: 'Time: Today at 12 PM – 2 PM'
           }
       } else {
         return {
