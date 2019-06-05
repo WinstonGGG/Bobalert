@@ -2,9 +2,9 @@
   <div id="app">
     <center> <img id="nameTitle" src="../assets/bobalertlogo.png"> </center>
     <div class="topNavigation">
-      <DropdownList :upcoming="this.upcoming" class="link"/>
-      <a class="active link" href="../"><div class="menu">Today</div></a>
-      <a class="link" href="upcoming"><div class="menu">Upcoming</div></a>
+      <DropdownList :upcoming="this.upcoming" :category="this.category" class="link"/>
+      <a class="link" :class="{ active: !upcoming }" href="../"><div class="menu">Today</div></a>
+      <a class="link" :class="{ active: upcoming }" href="upcoming"><div class="menu">Upcoming</div></a>
       <FilterComponent class="link"/>
     </div>
     <br>
@@ -25,6 +25,10 @@ export default {
     upcoming: {
       type: Boolean,
       default: false
+    },
+    category: {
+      type: String,
+      default: 'all'
     }
   }
 }

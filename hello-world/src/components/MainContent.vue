@@ -1,6 +1,6 @@
 <template>
   <div class="fund">
-    <NavBar :upcoming="this.upcoming" />
+    <NavBar :upcoming="this.upcoming" :category="this.category" />
     <Fundraiser :fundID="1" v-show="isThisCategory(1) && isUpcoming(1)" />
     <Fundraiser :fundID="2" v-show="isThisCategory(2) && isUpcoming(2)" />
     <Fundraiser :fundID="3" v-show="isThisCategory(3) && isUpcoming(3)" />
@@ -20,7 +20,7 @@ export default {
   props: {
     category: {
       type: String,
-      default: 'all'
+      default: ''
     },
     upcoming: {
       type: Boolean,
@@ -29,7 +29,7 @@ export default {
   },
   methods: {
     isThisCategory (fundID) {
-      return this.getFundraiserCategory(fundID) === this.category || this.category === 'all'
+      return this.getFundraiserCategory(fundID) === this.category || this.category === ''
     },
     getFundraiserCategory (fundID) {
       if (fundID === 1) {
@@ -37,6 +37,10 @@ export default {
       } else if (fundID === 2) {
         return 'food'
       } else if (fundID === 3) {
+        return 'drink'
+      } else if (fundID === 4) {
+        return 'food'
+      } else if (fundID === 5) {
         return 'drink'
       }
     },
