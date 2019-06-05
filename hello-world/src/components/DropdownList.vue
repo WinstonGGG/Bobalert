@@ -1,8 +1,8 @@
 <template>
   <div>
     <div v-on:click.prevent="showDropDown=!showDropDown">
-      <div class="menu">Categories</div>
-      <!-- <img src="..." alt="avatar"> -->
+      <!-- <div class="menu">{{ 'Category: ' +  (this.category == '' ? 'all' : this.category) }}</div> -->
+      <div class="menu">{{ 'Category' }}</div>
       <i :class="{ 'fa-caret-up': showDropDown, 'fa-caret-down': !showDropDown }" aria-hidden="true"></i>
     </div>
     <div v-if="showDropDown" class="dropdown-content">

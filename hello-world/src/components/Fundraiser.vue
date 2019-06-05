@@ -1,14 +1,12 @@
 <template>
-  <div class="fund">
-    <div class="border">
-      <router-link :to="{path: 'fundDetail', query: {fundID: fundID}}">
-        <h2 id="fundraiserTitle">{{ getFundraiserInfo (fundID).name }}</h2>
-        <h3>{{ getFundraiserInfo (fundID).org }}</h3>
-        <h3>{{ getFundraiserInfo (fundID).location }}</h3>
-        <h3>{{ getFundraiserInfo (fundID).time }}</h3>
-      </router-link>
-    </div>
-    <br>
+  <div :style="style" class="border">
+    <router-link :to="{path: 'fundDetail', query: {fundID: fundID}}">
+      <h2 id="fundraiserTitle">{{ getFundraiserInfo (fundID).name }}</h2>
+      <h3>{{ getFundraiserInfo (fundID).org }}</h3>
+      <h3>{{ getFundraiserInfo (fundID).location }}</h3>
+      <h3>{{ getFundraiserInfo (fundID).time }}</h3>
+      <h3>{{ this.width }}</h3>
+    </router-link>
   </div>
 </template>
 
@@ -17,6 +15,35 @@ export default {
   name: 'Fundrasier',
   props: {
     fundID: Number
+  },
+  data() {
+    return {
+      width: window.innerWidth
+    }
+  },
+  created() {
+    this.$nextTick(() => {
+      window.addEventListener('resize', () => {
+        this.width = window.innerWidth
+      });
+    })
+  },
+  computed: {
+    style () { 
+      if (this.width >= 900){
+        return {
+          width: '42%',
+          'margin-left': '2.5%',
+          'margin-right': '2.5%',
+        }
+      } else {
+        return {
+          width: '60%',
+          'margin-left': '20%',
+          'margin-right': '20%',
+        }
+      }
+    }
   },
   methods: {
     getFundraiserInfo (fundID) {
@@ -67,21 +94,21 @@ export default {
             name: 'Braised Pork Rice Fundraiser',
             org: 'Taiwanese Student Association',
             location: 'Quarry Plaza',
-            time: 'Time: Today at 12 PM – 6 PM'
+            time: 'Time: June 10th at 12 PM – 6 PM'
           }
       } else if (fundID === 8) {
         return {
             name: 'Dry Pot Fundraiser',
             org: 'Peach Perfect',
             location: 'Quarry Plaza',
-            time: 'Time: June 7th at 12 PM – 2 PM'
+            time: 'Time: Today at 12 PM – 2 PM'
           }
       } else if (fundID === 9) {
         return {
             name: 'Poke House Fundraiser',
             org: 'Vietnamese Student Association',
             location: 'Quarry Plaza',
-            time: 'Time: Today at 12 PM – 2 PM'
+            time: 'Time: June 10th at 12 PM – 2 PM'
           }
       } else {
         return {
@@ -99,7 +126,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h3 {
-  margin: 35px 0 0;
   font-size: 15px;
 }
 a {
@@ -123,8 +149,9 @@ h2 {
   margin-top: 30px;
 }
 .border {
+  float: left;
   font-family: "Lucida Console", Monaco, monospace;
-  line-height: 0.5;
+  /* line-height: 0.5; */
   font-size: 12px;
   border: 1px solid #bbbb;
   border-radius: 10px;
@@ -132,11 +159,7 @@ h2 {
   padding-right: 10px;
   padding-bottom: 20px;
   background-color: #EEEEEE;
-  width: 60%;
-  height: 192px;
-  margin-top: auto;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 15px;
   box-shadow: 1px 1px #bbbb;
 }
 

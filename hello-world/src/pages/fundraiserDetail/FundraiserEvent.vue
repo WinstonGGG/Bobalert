@@ -36,14 +36,14 @@ export default {
           name: 'Cool Tea Bar Boba Fundraiser',
           org: 'Vietnamese Student Association',
           location: 'SNE Library',
-          time: 'Time: June 7 at 12 PM – 6 PM'
+          time: 'Time: June 6 at 12 PM – 6 PM'
         }
       } else if (fundID === 2) {
         return {
           name: 'KBBQ Fundraiser',
           org: 'Korean American Student Association',
           location: 'Quarry Plaza',
-          time: 'Time: June 6 at 12 PM – 3 PM'
+          time: 'Time: June 7 at 12 PM – 3 PM'
         }
       } else if (fundID === 3) {
         return {
@@ -64,7 +64,7 @@ export default {
             name: 'Pokoe Boba Fundraiser',
             org: 'Model United Nation',
             location: 'Quarry Plaza',
-            time: 'Time: June 10th at 12 PM – 6 PM'
+            time: 'Time: June 7th at 12 PM – 6 PM'
           }
       }  else if (fundID === 6) {
         return {
@@ -78,21 +78,21 @@ export default {
             name: 'Braised Pork Rice Fundraiser',
             org: 'Taiwanese Student Association',
             location: 'Quarry Plaza',
-            time: 'Time: Today at 12 PM – 6 PM'
+            time: 'Time: June 10th at 12 PM – 6 PM'
           }
       } else if (fundID === 8) {
         return {
             name: 'Dry Pot Fundraiser',
             org: 'Peach Perfect',
             location: 'Quarry Plaza',
-            time: 'Time: June 7th at 12 PM – 2 PM'
+            time: 'Time: Today at 12 PM – 2 PM'
           }
       } else if (fundID === 9) {
         return {
             name: 'Poke House Fundraiser',
             org: 'Vietnamese Student Association',
             location: 'Quarry Plaza',
-            time: 'Time: Today at 12 PM – 2 PM'
+            time: 'Time: June 10th at 12 PM – 2 PM'
           }
       } else {
         return {
@@ -109,9 +109,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
 ul {
   list-style-type: none;
   padding: 0;
@@ -126,15 +123,13 @@ a {
 
 .border {
   font-family: "Calibri",sans-serif, monospace;
-  line-height: 0.5;
   font-size: 14px;
   border: 1px solid #bbbb;
   border-radius: 3px;
   padding-bottom: 5%;
   background-color: #EEEEEE;
   width: 60%;
-  height: 2%;
-  margin-top: auto;
+  margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
   box-shadow: 1px 1px #bbbb;
