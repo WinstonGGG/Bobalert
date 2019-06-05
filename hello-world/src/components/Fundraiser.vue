@@ -159,7 +159,7 @@ h2 {
   padding-right: 10px;
   padding-bottom: 20px;
   background-color: #EEEEEE;
-  margin-top: 15px;
+  margin-bottom: 20px;
   box-shadow: 1px 1px #bbbb;
 }
 

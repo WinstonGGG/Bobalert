@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div class="app">
     <center> <img id="nameTitle" src="../assets/bobalertlogo.png"> </center>
     <div class="topNavigation">
       <DropdownList :upcoming="this.upcoming" :category="this.category" class="link"/>
@@ -7,7 +7,6 @@
       <a class="link" :class="{ active: upcoming }" href="upcoming"><div class="menu">Upcoming</div></a>
       <FilterComponent class="link"/>
     </div>
-    <br>
   </div>
 </template>
 
@@ -37,13 +36,8 @@ export default {
 <style>
 /* CSS Section */
 
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.app {
+  margin-bottom: 40px;
 }
 
 /* Bobalert Logo Title */
