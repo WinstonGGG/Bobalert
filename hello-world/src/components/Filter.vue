@@ -6,10 +6,11 @@
       <i :class="{ 'fa-caret-up': showDropDown, 'fa-caret-down': !showDropDown }" aria-hidden="true"></i>
     </div>
     <div v-if="showDropDown" class="dropdown-content">
-      <input type="checkbox" name="vehicle1" v-model="quarry" checked>Quarry<br>
-      <input type="checkbox" name="vehicle2" v-model="sne" checked>SnE<br>
-      <input type="checkbox" name="vehicle3" v-model="others" checked>All<br><br>
-      <input type="submit" value="Apply">
+      <input type="checkbox" name="location1" v-model="quarry">Quarry<br>
+      <input type="checkbox" name="location2" v-model="sne">SnE<br>
+      <input type="checkbox" name="location3" v-model="others" checked>All<br><br>
+      <label for="Apply"</label>
+      <input type="button" onclick="submitFunction()" id="Apply" value="Apply">
     </div>
   </div>
 </template>
@@ -31,25 +32,31 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 /* Dropdown content (hidden by default) */
-.dropdown-content {
+.dropdown-content { 
   position: absolute;
-  z-index: 2;
-  width: 24.5%;
+  width: 24.76%;
   background-color: #003c6c;
   list-style-type: none;
-  padding: 0;
+
 }
 .dropdown-content div {
-  padding: 14px 9.5%;
+  padding: 17px;
   font-size: 17px;
   float: none;
-  text-decoration: none;
+  text-decoration: inherit;
   /* display: block; */
 }
-.dropdown-content div a {
-  margin-left: 0;
-  width: 84%;
-  text-align: center;
-  color: #f2f2f2;
+
+input[type=checkbox] {
+  position: relative;
+  display: flex;
+  margin-left: 100px;
+  margin-bottom: -16px;
+  margin-top: 20px;
+}
+
+input[type=button]{
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-size: 17px;
 }
 </style>
