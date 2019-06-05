@@ -2,9 +2,7 @@
   <div class="fund">
     <div class="border">
       <router-link :to="{path: 'fundDetail', query: {fundID: fundID}}">
-        <div id="fundraiserTitle">
-          <h2>{{ getFundraiserInfo (fundID).name }}</h2>
-        </div>
+        <h2 id="fundraiserTitle">{{ getFundraiserInfo (fundID).name }}</h2>
         <h3>{{ getFundraiserInfo (fundID).org }}</h3>
         <h3>{{ getFundraiserInfo (fundID).location }}</h3>
         <h3>{{ getFundraiserInfo (fundID).time }}</h3>
@@ -59,24 +57,29 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-#fundraiserTitle {
-  font-family: "Times New Roman", Times, sans-serif;
+  margin: 35px 0 0;
   font-size: 15px;
 }
-
+a {
+  font-family: sans-serif;
+  text-decoration: none;
+}
+a:link {
+  color: #003c6c;
+}
+a:visited {
+  color: #003c6c;
+}
+a:active {
+  color: #f0b436;
+}
+a:hover {
+  color: #0084c2;
+}
+h2 {
+  font-size: 24px;
+  margin-top: 30px;
+}
 .border {
   font-family: "Lucida Console", Monaco, monospace;
   line-height: 0.5;
