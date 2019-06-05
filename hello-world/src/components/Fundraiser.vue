@@ -29,7 +29,7 @@ export default {
     })
   },
   computed: {
-    style () { 
+    style () {
       if (this.width >= 900){
         return {
           width: '42%',
@@ -77,7 +77,7 @@ export default {
           }
       } else if (fundID === 5) {
         return {
-            name: 'Pokoe Boba Fundraiser',
+            name: 'Pekoe Boba Fundraiser',
             org: 'Model United Nation',
             location: 'Quarry Plaza',
             time: 'Time: June 7th at 12 PM – 6 PM'

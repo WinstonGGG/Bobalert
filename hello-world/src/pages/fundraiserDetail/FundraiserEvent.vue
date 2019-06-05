@@ -47,7 +47,7 @@ export default {
         }
       } else if (fundID === 3) {
         return {
-          name: 'Pokoe Boba Fundraiser',
+          name: 'Pekoe Boba Fundraiser',
           org: 'Model United Nation',
           location: 'Quarry Plaza',
           time: 'Time: Today at 12 PM – 6 PM'
@@ -61,7 +61,7 @@ export default {
           }
       } else if (fundID === 5) {
         return {
-            name: 'Pokoe Boba Fundraiser',
+            name: 'Poke Boba Fundraiser',
             org: 'Model United Nation',
             location: 'Quarry Plaza',
             time: 'Time: June 7th at 12 PM – 6 PM'

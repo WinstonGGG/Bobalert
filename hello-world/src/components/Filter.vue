@@ -7,10 +7,11 @@
     </div>
     <div v-if="showDropDown" class="dropdown-content">
       <h1> Locations: </h1>
-      <input type="checkbox" id="location" v-model="quarry">Quarry<br>
-      <input type="checkbox" id="location" v-model="sne">SnE<br>
-      <input type="checkbox" id="location" v-model="others" checked>All<br><br>
-      <input type="button" onclick="submitFunction()" id="Apply" value="Apply">
+      <input type="checkbox" id="location" v-model="quarry"> Quarry<br>
+      <input type="checkbox" id="location" v-model="sne"> SnE<br>
+      <div class="buttonStyle">
+        <input type="button" onclick="submitFunction()" id="Apply" value="Apply">
+      </div>
     </div>
   </div>
 </template>
@@ -32,12 +33,11 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 /* Dropdown content (hidden by default) */
-.dropdown-content { 
+.dropdown-content {
   position: absolute;
   width: 24.76%;
   background-color: #003c6c;
   list-style-type: none;
-
 }
 .dropdown-content div {
   padding: 17px;
@@ -59,7 +59,7 @@ input[type=checkbox] {
 
 input[type=button]{
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  font-size: 17px;
+  font-size: 14px;
 }
 
 h1{
