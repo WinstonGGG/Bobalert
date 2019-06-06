@@ -7,8 +7,8 @@
     </div>
     <div v-if="showDropDown" class="dropdown-content">
       <h1> Locations: </h1>
-      <input type="checkbox" id="location" v-model="quarry"> Quarry<br>
-      <input type="checkbox" id="location" v-model="sne"> SnE<br>
+      <input type="checkbox" id="location1"/><label for ="location1">Quarry</label><br>
+      <input type="checkbox" id="location2"/><label for ="location2">SnE</label><br>
       <div class="buttonStyle">
         <input type="button" onclick="submitFunction()" id="Apply" value="Apply">
       </div>
@@ -45,6 +45,10 @@ export default {
   float: none;
   text-decoration: inherit;
   /* display: block; */
+}
+
+label {
+  color: white;
 }
 
 input[type=checkbox] {
