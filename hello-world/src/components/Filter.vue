@@ -22,7 +22,7 @@ export default {
   props: {
     name: String
   },
-  data() {
+  data () {
     return {
       showDropDown: false
     }
@@ -64,6 +64,13 @@ input[type=checkbox] {
 input[type=button]{
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   font-size: 14px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 7px;
+  border-color: #f0b436;
+  background-color: #f0b436;
+  color: white;
 }
 
 h1{
