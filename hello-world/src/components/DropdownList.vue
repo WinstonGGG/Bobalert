@@ -68,7 +68,7 @@ export default {
 .dropdown-content {
   position: absolute;
   z-index: 2;
-  width: 24.5%;
+  width: 22.2%;
   background-color: #003c6c;
   list-style-type: none;
   padding: 0;
@@ -82,7 +82,6 @@ export default {
 }
 .dropdown-content div a {
   margin-left: 0;
-  width: 84%;
   text-align: center;
   color: #f2f2f2;
 }

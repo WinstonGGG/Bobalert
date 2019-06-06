@@ -35,7 +35,7 @@ export default {
 /* Dropdown content (hidden by default) */
 .dropdown-content {
   position: absolute;
-  width: 24.76%;
+  width: 22.1%;
   background-color: #003c6c;
   list-style-type: none;
 }
@@ -50,7 +50,7 @@ export default {
 input[type=checkbox] {
   position: relative;
   display: flex;
-  margin-left: 120px;
+  margin-left: 50px;
   margin-bottom: -16px;
   margin-top: 20px;
   color: #f2f2f2;

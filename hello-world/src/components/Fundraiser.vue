@@ -5,7 +5,6 @@
       <h3>{{ getFundraiserInfo (fundID).org }}</h3>
       <h3>{{ getFundraiserInfo (fundID).location }}</h3>
       <h3>{{ getFundraiserInfo (fundID).time }}</h3>
-      <h3>{{ this.width }}</h3>
     </router-link>
   </div>
 </template>
