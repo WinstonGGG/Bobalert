@@ -9,6 +9,13 @@
       <h1> Locations: </h1>
       <input type="checkbox" id="location1"/><label for ="location1">Quarry</label><br>
       <input type="checkbox" id="location2"/><label for ="location2">SnE</label><br>
+      <h2> Price Range: </h2>
+      <select>
+        <option value="low">Low</option>
+        <option value="mid">Mid</option>
+        <option value="high">High</option>
+        <option value="all">All</option>
+      </select>
       <div class="buttonStyle">
         <input type="button" onclick="submitFunction()" id="Apply" value="Apply">
       </div>
@@ -80,4 +87,14 @@ h1{
   color: #f2f2f2;
 }
 
+h2{
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  text-align: center;
+  font-size: 17px;
+  color: white;
+}
+
+select{
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+}
 </style>
