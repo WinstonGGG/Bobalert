@@ -7,17 +7,20 @@
     </div>
     <div v-if="showDropDown" class="dropdown-content">
       <h1> Locations: </h1>
-      <input type="checkbox" id="location1"/><label for ="location1">Quarry</label><br>
-      <input type="checkbox" id="location2"/><label for ="location2">SnE</label><br>
+      <input v-model="quarry" type="checkbox" id="location1"/><label for ="location1">Quarry</label><br>
+      <input v-model="sne" type="checkbox" id="location2"/><label for ="location2">SnE</label><br>
       <h2> Price Range: </h2>
-      <select>
+      <select v-model="price" value="all">
+        <option value="all">All</option>
         <option value="low">Low</option>
         <option value="mid">Mid</option>
         <option value="high">High</option>
-        <option value="all">All</option>
       </select>
       <div class="buttonStyle">
-        <input type="button" onclick="submitFunction()" id="Apply" value="Apply">
+        <!-- <input type="button" onclick="submitFunction()" id="Apply" value="Apply"> -->
+        <router-link class="button" :to="{path: '/', query: {quarry, sne, price}}">
+          Apply
+        </router-link>
       </div>
     </div>
   </div>
@@ -27,7 +30,13 @@
 export default {
   name: 'Filter',
   props: {
-    name: String
+    name: String,
+    quarry: Boolean,
+    sne: Boolean,
+    price: {
+      type: String,
+      default: 'all'
+    }
   },
   data () {
     return {
@@ -42,7 +51,7 @@ export default {
 /* Dropdown content (hidden by default) */
 .dropdown-content {
   position: absolute;
-  width: 22.1%;
+  width: 24.5%;
   background-color: #003c6c;
   list-style-type: none;
 }
@@ -68,7 +77,7 @@ input[type=checkbox] {
 
 }
 
-input[type=button]{
+.button {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   font-size: 14px;
   padding: 5px;
@@ -78,6 +87,7 @@ input[type=button]{
   border-color: #f0b436;
   background-color: #f0b436;
   color: white;
+  text-decoration: none;
 }
 
 h1{

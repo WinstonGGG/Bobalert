@@ -1,7 +1,7 @@
 <template>
   <div :style="style" class="border">
     <router-link :to="{path: 'fundDetail', query: {fundID: fundID}}">
-      <h2 id="fundraiserTitle">{{ getFundraiserInfo (fundID).name }}</h2>
+      <h2 :style="title" id="fundraiserTitle">{{ getFundraiserInfo (fundID).name }}</h2>
       <h3>{{ getFundraiserInfo (fundID).org }}</h3>
       <h3>{{ getFundraiserInfo (fundID).location }}</h3>
       <h3>{{ getFundraiserInfo (fundID).time }}</h3>
@@ -33,7 +33,7 @@ export default {
         return {
           width: '42%',
           'margin-left': '2.5%',
-          'margin-right': '2.5%',
+          'margin-right': '2.5%'
         }
       } else {
         return {
@@ -42,7 +42,17 @@ export default {
           'margin-right': '20%',
         }
       }
-    }
+    }, 
+    title () {
+      if (this.width >= 900){
+        return {
+          'white-space': 'nowrap',
+          'overflow': 'hidden',
+          'text-overflow': 'ellipsis'
+        }
+      }
+      return ;
+    }, 
   },
   methods: {
     getFundraiserInfo (fundID) {
@@ -146,6 +156,7 @@ a:hover {
 h2 {
   font-size: 24px;
   margin-top: 30px;
+  width: 100%;
 }
 .border {
   float: left;
