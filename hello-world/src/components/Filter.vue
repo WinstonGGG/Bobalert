@@ -70,11 +70,10 @@ label {
 input[type=checkbox] {
   position: relative;
   display: flex;
-  margin-left: 50px;
+  margin-left: 10%;
   margin-bottom: -16px;
   margin-top: 20px;
   color: #f2f2f2;
-
 }
 
 .button {
@@ -106,5 +105,6 @@ h2{
 
 select{
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  background-color: #f2f2f2;
 }
 </style>
