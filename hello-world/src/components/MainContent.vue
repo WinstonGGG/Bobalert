@@ -1,47 +1,57 @@
 <template>
-  <div>
+  <div class="content">
     <NavBar :upcoming="this.upcoming" :category="this.category" />
-    <div class="fund">
-      <Fundraiser :fundID="1"
-        v-show="isThisCategory(1) && isUpcoming(1)"
-      />
-      <Fundraiser :fundID="2"
-        v-show="isThisCategory(2) && isUpcoming(2)"
-      />
-      <Fundraiser :fundID="3"
-        v-show="isThisCategory(3) && isUpcoming(3)"
-      />
-      <Fundraiser :fundID="4"
-        v-show="isThisCategory(4) && isUpcoming(4)"
-      />
-      <Fundraiser :fundID="5"
-        v-show="isThisCategory(5) && isUpcoming(5)"
-      />
-      <Fundraiser :fundID="6"
-        v-show="isThisCategory(6) && isUpcoming(6)"
-      />
-      <Fundraiser :fundID="7"
-        v-show="isThisCategory(7) && isUpcoming(7)"
-      />
-      <Fundraiser :fundID="8"
-        v-show="isThisCategory(8) && isUpcoming(8)"
-      />
-      <Fundraiser :fundID="9"
-        v-show="isThisCategory(9) && isUpcoming(9)"
-      />
+    <table>
+      <th class="fund">
+        <tr>
+          <Fundraiser :fundID="1"
+            v-show="isThisCategory(1) && isUpcoming(1)"
+          />
+          <Fundraiser :fundID="2"
+            v-show="isThisCategory(2) && isUpcoming(2)"
+          />
+          <Fundraiser :fundID="3"
+            v-show="isThisCategory(3) && isUpcoming(3)"
+          />
+          <Fundraiser :fundID="4"
+            v-show="isThisCategory(4) && isUpcoming(4)"
+          />
+          <Fundraiser :fundID="5"
+            v-show="isThisCategory(5) && isUpcoming(5)"
+          />
+          <Fundraiser :fundID="6"
+            v-show="isThisCategory(6) && isUpcoming(6)"
+          />
+          <Fundraiser :fundID="7"
+            v-show="isThisCategory(7) && isUpcoming(7)"
+          />
+          <Fundraiser :fundID="8"
+            v-show="isThisCategory(8) && isUpcoming(8)"
+          />
+          <Fundraiser :fundID="9"
+            v-show="isThisCategory(9) && isUpcoming(9)"
+          />
+        </tr>
+      </th>
+    </table>
+    <div >
+     
     </div>
+      <Footer />
   </div>
 </template>
 
 <script>
 import Fundraiser from '../components/Fundraiser.vue'
 import NavBar from '../components/NavBar.vue'
+import Footer from '../components/Footer.vue'
 
 export default {
   name: 'MainContent',
   components: {
     Fundraiser,
-    NavBar
+    NavBar,
+    Footer
   },
   props: {
     category: {
@@ -158,5 +168,9 @@ export default {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+  height: 100%;
 }
+/* .content {
+  position: relative;
+} */
 </style>

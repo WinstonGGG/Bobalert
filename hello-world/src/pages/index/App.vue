@@ -1,12 +1,7 @@
 <template>
-  <div id="app">
-    <!-- <center> <img id="nameTitle" src="../../assets/bobalertlogo.png"> </center>
-    <div class="topNavigation">
-      <DropdownList class="link"/>
-      <a class="active link" href="../"><div class="menu">Today</div></a>
-      <a class="link" href="upcoming"><div class="menu">Upcoming</div></a>
-      <FilterComponent class="link"/>
-    </div> -->
+  <div 
+    id="app"
+  >
     <router-view></router-view>
     <br>
   </div>
